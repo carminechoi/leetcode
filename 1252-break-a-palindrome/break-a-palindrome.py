@@ -3,15 +3,11 @@ class Solution:
         N = len(palindrome)
         if N == 1:
             return ""
-        replaced = False
 
         for i in range(N//2):
-            if not replaced and palindrome[i] != 'a':
+            if  palindrome[i] != 'a':
                 palindrome = palindrome[:i] + 'a' + palindrome[i+1:]
-                replaced = True
-                break
+                return palindrome
 
-        if not replaced:
-            return palindrome[:-1] + "b"
+        return palindrome[:-1] + "b"
 
-        return palindrome
