@@ -4,6 +4,6 @@ class Solution:
         words.sort(key=lambda word: len(word))
         
         result = " ".join(words)
-        result = result.lower().capitalize()
+        result = result.capitalize()
 
         return result
